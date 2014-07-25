@@ -1,0 +1,59 @@
+MySQL Connector/Python - Release Notes / ChangeLog
+Copyright (c) 2009, 2014, Oracle and/or its affiliates. All rights reserved.
+
+Full release notes:
+ http://dev.mysql.com/doc/relnotes/connector-python/en/
+
+1.2.2 (2014-05-27)
+------------------
+* BUG#18676741: Fixed bootstrapping tests using MySQL 5.5
+* BUG#17995416: Fixed WRR scheduling for Fabric
+* BUG#17957509: Added ReadMe and License files when installing DMG
+* BUG#18380134: Fixed Connector/Python to work with south
+* BUG#18527437: Fixed failing of unittests when --host=::1 is an argument
+* BUG#18550039: Fixed building RPM for Connector/Python
+* BUG#18415927: Fixed authentication with SECURE_CONNECTION unset
+* BUG#18422727: Removed GPL license in the commercial deb package
+* BUG#18527132: Fixed presence of empty documents in MSI build
+* BUG#18463182: Fixed user argument for Fabric
+* BUG#18511061: Fix unittest compatibility with MySQL 5.7.4
+* BUG#18389196: Fixed inserting parameters multiple times in a statement
+* BUG#18258807: Fixed raising better error with unconvertible python type
+* BUG#18144971: Error with unicode arguments in prepared statements
+* BUG#18465031: Fixed Python v3 tests on Windows
+* BUG#18380100: Fix introspection for Django and Python v3
+* BUG#18465605: Fixed testing using relative server folder
+
+1.2.1 (2014-03-31)
+------------------
+* WL#7387: Reporting failures to Fabric
+* WL#6166: Added connection fail-over support
+* WL#7542: Added method for clearing session state
+* WL#7558: Support for MySQL Fabric credentials
+* BUG#18220593: Fixed executemany() for unicode operations
+* BUG#18143073: Added removal of fabric folder in RPM spec files
+* BUG#18358832: Fixed Fabric import for Python v3
+* BUG#16217765: Fixed authentication support for MySQL 5.6
+* BUG#18172769: Fixed set_autocommit to retain autocommit value
+* BUG#18187561: Fixed Django backend errors with time functions
+* BUG#17054848: Fixed using SSL without key and certificate
+* BUG#17965619: Fixed MySQLCursor.callproc method with bytes parameters
+* BUG#18227513: Fixed dumping information from Fabric
+* BUG#18075339: Changed default MySQL Fabric port
+* BUG#17857712: Added fixes to use CPY with Django 1.6
+* BUG#18040042: Fixed clearing session with pooled connection
+* BUG#17826833: Fixed executemany for INSERT with no VALUES-clause
+* BUG#17573172: Added support for access modes for START TRANSACTION
+* BUG#17889076: Fixed error handling for unittests.py using -t option
+* BUG#17780576: Added support for utf8mb4 character set
+* BUG#17958420: Fix error handling parse_column_count()
+* BUG#18047794: Fixed handling non-existing table in shard
+* BUG#18047591: Fixed default mode to read-write group lookup
+* BUG#18055719: Fixed passing Fabric connect attempt settings
+* BUG#18047758: Fixed type checking in set_property
+* BUG#18054810: Fixed output of pylint to include msg_id
+* BUG#17887240: Fix testing style of Fabric
+
+1.2.0a1 (2013-12-19)
+--------------------------
+* WL7433: Adding support for MySQL Fabric

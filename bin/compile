@@ -198,8 +198,14 @@ if [ "$FRESH_PYTHON" ] || [[ ! $(pip --version) == *$PIP_VERSION* ]]; then
     cd $ROOT_DIR/vendor/pip-$PIP_VERSION/
     python setup.py install &> /dev/null
     cd $WORKING_DIR
-
   bpwatch stop install_pip
+
+  bpwatch start install_mysql
+    puts-step "Installing MySQL"
+    cd $ROOT_DIR/vendor/mysql-connector-python-1.2.2/
+    python setup.py install &> /dev/null
+    cd $WORKING_DIR
+  bpwatch stop install_mysql
   bpwatch stop prepare_environment
 fi
 
